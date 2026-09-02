@@ -16,22 +16,23 @@ Todo o firmware é escrito em **C++**, rodando diretamente no microcontrolador (
 
 ```
                     ┌──────────────────┐
-                    │  Fonte de energia │
+                    │ Fonte de energia │
                     └────────┬─────────┘
                              │
-                    ┌────────▼─────────┐
-                    │  ESP32-WROOM-32   │
-                    │ (controlador central)
-                    └───┬───────────┬──┘
+                    ┌────────▼────────────┐
+                    │    ESP32-WROOM-32   │
+                    │(controlador central)│
+                    └───┬───────────┬─────┘
              ┌──────────┘           └──────────┐
-    ┌────────▼────────┐            ┌───────────▼────────┐
-    │  Drivers/Servos   │            │  Sensores de cor    │
-    │  (6x, um por face)│            │  (6x TCS3200)       │
-    └────────┬──────────┘            └──────────┬─────────┘
-             │                                    │
-    ┌────────▼────────┐                          │
-    │  Estrutura mecânica + cubo mágico ◄──────────┘
-    └───────────────────┘
+    ┌────────▼─────│───┐            ┌───────────▼────────┐
+    │  Drivers/Servos  │            │  Sensores de cor   │
+    │ (6x, um por face)│            │    (6x TCS3200)    │
+    └────────┬─────────┘            └──────────┬─────────┘
+             │                                 │
+    ┌────────▼─────────────┐                   │
+    │  Estrutura mecânica  │ ◄─────────────────┘
+    │  + cubo mágico       │
+    └──────────────────────┘
 ```
 
 ## Hardware
