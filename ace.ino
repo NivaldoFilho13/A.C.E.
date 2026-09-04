@@ -71,17 +71,14 @@ void retornarFace() {
 void lerCor() {
   int vermelho, verde, azul;
 
-  // Lê o canal vermelho
   digitalWrite(PINO_S2, LOW);
   digitalWrite(PINO_S3, LOW);
   vermelho = pulseIn(PINO_OUT, LOW);
 
-  // Lê o canal verde
   digitalWrite(PINO_S2, HIGH);
   digitalWrite(PINO_S3, HIGH);
   verde = pulseIn(PINO_OUT, LOW);
 
-  // Lê o canal azul
   digitalWrite(PINO_S2, LOW);
   digitalWrite(PINO_S3, HIGH);
   azul = pulseIn(PINO_OUT, LOW);
